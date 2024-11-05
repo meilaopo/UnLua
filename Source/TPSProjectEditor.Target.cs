@@ -21,7 +21,7 @@ public class TPSProjectEditorTarget : TargetRules
     {
         Type = TargetType.Editor;
 #if UE_5_4_OR_LATER
-        DefaultBuildSettings = BuildSettingsVersion.V4;
+        DefaultBuildSettings = BuildSettingsVersion.Latest;
         IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
 #else
         DefaultBuildSettings = BuildSettingsVersion.V2;

@@ -29,9 +29,9 @@ extern "C" {
 #endif
 #endif
 
-#include "lfunc.h"
-#include "lstate.h"
-#include "lobject.h"
+//#include "lfunc.h"
+//#include "lstate.h"
+//#include "lobject.h"
 
 #ifdef __cplusplus
 #if !LUA_COMPILE_AS_CPP

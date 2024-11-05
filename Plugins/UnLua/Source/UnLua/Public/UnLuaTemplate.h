@@ -27,6 +27,7 @@ namespace UnLua
     template <class T, class... Args> struct TIsConstructible { enum { Value = std::is_constructible<T, Args...>::value }; };
     template <class T> struct TIsCopyConstructible { enum { Value = std::is_copy_constructible<T>::value }; };
     template <class T> struct TIsDestructible { enum { Value = std::is_destructible<T>::value }; };
+    template <class T> struct TIsTriviallyDestructible { enum { Value = std::is_trivially_destructible<T>::value }; };
 
 
     /**

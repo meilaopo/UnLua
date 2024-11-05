@@ -29,7 +29,7 @@
 #include "UnLuaLegacy.h"
 #include "UnLuaLib.h"
 #include "UnLuaSettings.h"
-#include "lstate.h"
+//#include "lstate.h"
 
 namespace UnLua
 {
@@ -212,13 +212,13 @@ namespace UnLua
         if (!L)
             return nullptr;
 
-        const auto MainThread = G(L)->mainthread;
+        const auto MainThread = UnLua_GetMainThread(L);
         return AllEnvs.FindRef(MainThread);
     }
 
     FLuaEnv& FLuaEnv::FindEnvChecked(const lua_State* L)
     {
-        return *AllEnvs.FindChecked(G(L)->mainthread);
+        return *AllEnvs.FindChecked(UnLua_GetMainThread(L));
     }
 
     void FLuaEnv::Start(const TMap<FString, UObject*>& Args)

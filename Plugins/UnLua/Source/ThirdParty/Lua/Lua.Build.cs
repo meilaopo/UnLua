@@ -32,7 +32,7 @@ public class Lua : ModuleRules
     {
         Type = ModuleType.External;
         bEnableUndefinedIdentifierWarnings = false;
-        ShadowVariableWarningLevel = WarningLevel.Off;
+        UndefinedIdentifierWarningLevel = WarningLevel.Off;
 
         m_LuaVersion = GetLuaVersion();
         m_Config = GetConfigName();
@@ -397,7 +397,7 @@ public class Lua : ModuleRules
         string version;
         if (config.GetString(section, "LuaVersion", out version))
             return version;
-        return "lua-5.4.3";
+        return "lua-5.4.4";
     }
 
     private void EnsureDirectoryExists(string fileName)

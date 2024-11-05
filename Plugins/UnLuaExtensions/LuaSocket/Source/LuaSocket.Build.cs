@@ -28,6 +28,7 @@ public class LuaSocket : ModuleRules
         bUseUnity = false;
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         bEnableUndefinedIdentifierWarnings = false;
+        UndefinedIdentifierWarningLevel = WarningLevel.Off;
 
         PublicDependencyModuleNames.AddRange(
             new[]

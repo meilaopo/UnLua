@@ -390,7 +390,7 @@ namespace UnLua
         }
         else if (const auto Enum = Cast<UEnum>(Field))
         {
-            const auto EnumProperty = new FEnumProperty(PropertyCollector, NAME_None, RF_Transient, 0, CPF_HasGetValueTypeHash, Enum);
+            const auto EnumProperty = new FEnumProperty(PropertyCollector, NAME_None, RF_Transient);
             const auto UnderlyingProperty = new FByteProperty(EnumProperty, TEXT("UnderlyingType"), RF_Transient);
             Property = EnumProperty;
             Property->AddCppProperty(UnderlyingProperty);

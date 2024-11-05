@@ -295,6 +295,12 @@ typedef struct luaL_Stream {
 /* }============================================================ */
 
 
+//UnLua Begin
+LUALIB_API lua_State* UnLua_GetMainThread(const lua_State* L);
+
+LUALIB_API lua_State* UnLua_GetLightUserData(const lua_State* L);
+//UnLua End
+
 
 #endif
 
