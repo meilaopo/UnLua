@@ -1104,11 +1104,3 @@ LUALIB_API void luaL_checkversion_ (lua_State *L, lua_Number ver, size_t sz) {
                   (LUAI_UACNUMBER)ver, (LUAI_UACNUMBER)v);
 }
 
-lua_State* UnLua_GetMainThread(const lua_State* L)
-{
-    if (L == nullptr)
-    {
-        return nullptr;
-    }
-    return L->l_G->mainthread;
-}
